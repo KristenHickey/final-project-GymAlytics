@@ -1,0 +1,243 @@
+@import "../library";
+
+.set-Div {
+  width: 100%;
+  padding: 2rem 2rem 1.2rem 2rem;
+  margin-bottom: 2vh;
+  position: relative;
+  background: white;
+  border-radius: @borderRadius;
+  box-shadow: @boxShadow;
+}
+
+.set-Div_inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+#round_button {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 0px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 5px;
+}
+
+//webcamAI
+
+.webcam-stack-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 0.5px;
+}
+
+.webcam-component {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  border-radius: 5px;
+}
+
+.webcam-canvas {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 2;
+}
+
+//Webcam overlay
+
+.overlay-container {
+  height: 100%;
+  width: 100%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  border-radius: 5px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.overlay-container-hide {
+  display: none;
+}
+
+.instructions {
+  margin-bottom: 10px;
+}
+
+//WorkoutItem
+
+.workout_container {
+  height: 20vh;
+  max-height: 10rem;
+  min-height: 7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  margin-left: 2px;
+  width: 60vw;
+  max-width: 20rem;
+  min-width: 15rem;
+  background: white;
+  border-radius: @borderRadius;
+  box-shadow: @boxShadow;
+  position: relative;
+  z-index: 4;
+}
+
+.workout_info {
+  margin: 1rem;
+}
+
+#startworkoutButton {
+  font-size: smaller;
+  padding: 0;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+//WorkoutList
+
+.workout_scroll {
+  display: flex;
+  z-index: 3;
+}
+
+.workout_list {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  min-height: 180px;
+  margin-left: -1rem;
+  margin-right: -2rem;
+  padding-left: 1rem;
+  // scrollbar-width: 0px;
+}
+
+.workout_list::-webkit-scrollbar-track {
+  background-color: black;
+}
+
+@media only screen and (max-width: 500px) {
+  .workout_list {
+    width: 100vw;
+  }
+  .workout_list::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// calendar comp
+
+.calendar-Div {
+  margin: 20px 0;
+  max-width: 400px;
+  width: 80vw;
+  box-shadow: @boxShadow;
+  border-radius: @borderRadius;
+}
+.calendar-title {
+  padding: 8px;
+  margin: 2px;
+  color: grey;
+}
+.calendar-count {
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+//stats comp
+
+.stats-list {
+  margin-top: 20px;
+  max-width: 400px;
+}
+.stats-item {
+  margin-top: 10px;
+  background: white;
+  box-shadow: @boxShadow;
+  height: 45px;
+  border-radius: @borderRadius;
+  display: flex;
+  align-items: center;
+}
+.stats-item-count {
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.chart {
+  margin-top: 30px;
+  max-width: 400px;
+  box-shadow: @boxShadow;
+  padding: 20px;
+  background: white;
+  border-radius: @borderRadius;
+}
+
+//loadingComponent
+
+.center_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+}
+.loading-notice {
+  margin-top: 10px;
+}
+
+//friend item comp
+
+.friend-item {
+  display: flex;
+  // justify-content: space-evenly;
+  align-items: center;
+  height: 8vh;
+  max-height: 10rem;
+  min-height: 3rem;
+  margin-top: 0.5rem;
+  width: 100%;
+
+  min-width: 20rem;
+  background: white;
+  border-radius: @borderRadius;
+  box-shadow: @boxShadow;
+  position: relative;
+}
+
+.avatar-div {
+  width: 20%;
+  max-width: 85px;
+  display: flex;
+  justify-content: center;
+}
+
+.name-div {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.friend-btns {
+  width: 20%;
+  max-width: 85px;
+  display: flex;
+  justify-content: center;
+}
